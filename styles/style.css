@@ -1,3 +1,30 @@
-h2{
-    color: red;
+body{
+    background-color: #E17088;
+    max-width: 100%;
 }
+
+ul li button{
+    background-color: #C32948;
+    border: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+h1{
+    color: white;
+    font-size: 4em;
+    margin: 0;
+}
+
+div:nth-of-type(1){
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+img{
+    width: 70%;
+}
+
