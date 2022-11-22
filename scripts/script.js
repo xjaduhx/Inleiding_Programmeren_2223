@@ -1,4 +1,4 @@
-var name = "Jan";
+var name = "henk";
 var age = 20;
 var dobbel = ['Jade', 'Elisa', 'Hardy', 'Merel'];
 
