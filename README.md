@@ -8,7 +8,14 @@
 <img src="./readme-images/eeveeidle.jpg" width="200px" alt="Eevee als er geen knoppen zijn ingedrukt">
     
 <img src="./readme-images/opzetwebsite.jpg" width="200px" alt="Eevee als er geen knoppen zijn ingedrukt">
+   
+</details>
 
-  
- 
+#### Week 2
+<details open>
+  <summary>In de eerste les heb ik mijn wireframes gemaakt hoe ik wil dat het eruit komt te zien en wat er gedaan kan worden op mijn website.</summary>
+
+<img src="./readme-images/Wireframes.jpg" width="200px" alt="Eevee als er geen knoppen zijn ingedrukt">
+
+   
 </details>
