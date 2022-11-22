@@ -17,5 +17,7 @@
 
 <img src="./readme-images/Wireframes.jpg" width="200px" alt="Eevee als er geen knoppen zijn ingedrukt">
 
+<img src="./readme-images/Flowchart.png" width="200px" alt="Eevee als er geen knoppen zijn ingedrukt">
+
    
 </details>
