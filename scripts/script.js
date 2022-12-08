@@ -2,9 +2,9 @@ var balkStatus = 0;
 var welkeEvolutie = 0
 var imageElement = document.querySelector('.debalk');
 var eeveePlaatje = document.querySelector('.eevee');
-
-// var evalurenKnop = document.querySelector('.evolvebutton');
-
+var inputField = document.querySelector('.input_field');
+var submitButton = document.querySelector('.submit_button');
+console.log(submitButton);
 function updateBalk(){
     if (balkStatus == 0){
         imageElement.src = "./images/Bar2.png";
@@ -54,20 +54,27 @@ function updateBalk(){
         }
     }
 }
+function handleSubmit(){
+    console.log('hallo');
+}
+// function barking(){
+//     document.getElementById('barking').play();
+// }
 
+submitButton.addEventListener('submit', function(e){
+    e.preventDefault()
+    console.log('hallo');
+});
 
 
 
 var eersteKnop = document.querySelector('.eerste_knop');
-eersteKnop.addEventListener('click', updateBalk);
+eersteKnop.addEventListener('click', updateBalk,);
+// eersteKnop.addEventListener('click', barking);
 
 var eersteKnop = document.querySelector('.tweede_knop');
 eersteKnop.addEventListener('click', updateBalk);
 
 var eersteKnop = document.querySelector('.derde_knop');
 eersteKnop.addEventListener('click', updateBalk);
-
-// var evalurenKnop = document.querySelector('.evolvebutton');
-// evalurenKnop.addEventListener('click', updateBalk);
-
 
