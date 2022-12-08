@@ -1,30 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Nerko+One&display=swap');
+
 body{
     background-color: #E17088;
     max-width: 100%;
+    background-image: url(../images/achtergrondnatuur.webp);
+    background-size: auto;
 }
 
-ul li button{
-    background-color: #C32948;
-    border: none;
-}
 
 ul li{
     list-style: none;
-}
-
-h1{
-    color: white;
-    font-size: 4em;
-    margin: 0;
 }
 
 div:nth-of-type(1){
     text-align: center;
     justify-content: center;
     width: 100%;
+
 }
 
-img{
-    width: 70%;
+div:nth-of-type(1) img{
+    width: 28em;
+    margin: 5em 0 4em 2em;
+    
 }
 
+
+
+
+div:nth-of-type(2){
+    display: flex;
+    justify-content: flex-end;
+}
+
+div:nth-of-type(2) button{
+    margin: 0 3em 0 0;
+    background-color: red;
+}
+
+
+
+
+ul:nth-of-type(1) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+
+ul:nth-of-type(1) button{
+   color: white;
+   background-color: #E16F88;
+   border: none;
+   font-size: 2.5em;
+   padding: .5em 1em;
+   border-radius: .6em;
+   margin: 1em 0 0 0;
+   box-shadow: 5px 7px #C12949;
+   font-family: 'Gochi Hand', cursive;
+   font-family: 'Nerko One', cursive;
+}
+
+ul:nth-of-type(1) li:nth-of-type(1) button{
+    margin: 1em 0 0 1.5em;
+ }
+
+ ul:nth-of-type(1) li:nth-of-type(3) button{
+    margin: 1em 1.5em 0 0;
+ }
+
+
+
+
+
+
+div:nth-of-type(3) img{
+    width: 45em;
+    margin: 1em 0 1.5em 0;
+}
+
+div:nth-of-type(3){
+    display: flex;
+    justify-content: center;
+}
