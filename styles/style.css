@@ -16,24 +16,21 @@ ul li{
 
 
 
-div:nth-of-type(1) form button{
-    background-color: #C12949;
-    color: white;
+
+
+div:nth-of-type(1) input{
+    background-color: white;
+    border: 2px solid gray;
+    font-size: 1.5em;
+}
+
+div:nth-of-type(1) button{
+    background-color: #E16F88;
+    font-size: 1.5em;
     border: none;
-    padding: .5em 1em;
-    font-size: 1em;
+    padding: .2em .6em;
     border-radius: .5em;
 }
-
-div:nth-of-type(1) form input{
-    border: none;
-    padding: .5em 1em;
-    font-size: 1em;
-    border: 2px solid #959595
-}
-
-
-
 
 div:nth-of-type(1) h2{
     font-family: 'Gochi Hand', cursive;
@@ -45,6 +42,9 @@ div:nth-of-type(1) h2{
 
 
 
+
+
+
 div:nth-of-type(2){
     text-align: center;
     justify-content: center;
@@ -52,12 +52,25 @@ div:nth-of-type(2){
 
 }
 
-div:nth-of-type(2) img{
-    width: 28em;
-    margin: 5em 0 4em 2em;
-    
+div:nth-of-type(2) img:nth-of-type(1){
+    width: 10em;
+    /* margin: 5em 0 4em 2em; */
 }
 
+div:nth-of-type(2) img:nth-of-type(2){
+    width: 28em;
+    margin: 2em 0 4em 2em;
+}
+
+div:nth-of-type(2) button{
+    display: flex;
+    margin: 1em 0em 1em 0em;
+    background-color: #E16F88;
+    font-size: 1.5em;
+    border: none;
+    padding: .2em .6em;
+    border-radius: .5em;
+}
 
 
 
@@ -133,5 +146,8 @@ div:nth-of-type(4){
     justify-content: center;
 }
 
-
+.eerste_knop:disabled, .tweede_knop:disabled, .derde_knop:disabled{
+    color: white;
+    background-color: grey;
+}
 
