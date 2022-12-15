@@ -58,7 +58,7 @@ function updateBalk(){
     else{
 
         if (welkeEvolutie == 0){
-            eeveePlaatje.src = "./images/sylveon.jpeg";
+            eeveePlaatje.src = "./images/vaporeon.PNG";
             welkeEvolutie = 1;
             imageElement.src = "./images/bar0.png";
             balkStatus = 0;
@@ -75,6 +75,10 @@ function updateBalk(){
             welkeEvolutie = 2;
             balkStatus = 0;
             imageElement.src = "./images/bar0.png";
+            document.querySelector('#evolvebuttonid').disabled = true;
+            document.querySelector('.eerste_knop').disabled = false;
+            document.querySelector('.tweede_knop').disabled = false;
+            document.querySelector('.derde_knop').disabled = false;
         }
     }
 }
@@ -82,19 +86,54 @@ function handleSubmit(){
     console.log('hallo');
 }
 function barking(){
-    document.getElementById('barking').play();
+    document.getElementById('barking').play()
+    document.getElementById('barking').3();
 }
 
 function sleepeevee(){
-    eeveePlaatje.src = "./images/eeveesleep.PNG";
+
+    if (welkeEvolutie == 0){
+        eeveePlaatje.src = "./images/eeveesleep.PNG";
+    }
+    
+    else if (welkeEvolutie == 1){
+        eeveePlaatje.src = "./images/vaporeonsleep.PNG";
+    }
+
+    else if (welkeEvolutie == 2){
+        eeveePlaatje.src = "./images/umbreon.jpeg";
+    }
 }
 
 function feedeevee(){
-    eeveePlaatje.src = "./images/eeveefood.PNG";
+
+    if (welkeEvolutie == 0){
+        eeveePlaatje.src = "./images/eeveefood.PNG";
+    }
+    
+    else if (welkeEvolutie == 1){
+        eeveePlaatje.src = "./images/vaporeoneat.PNG";
+    }
+
+    else if (welkeEvolutie == 2){
+        eeveePlaatje.src = "./images/umbreon.jpeg";
+    }
 }
 
 function playeevee(){
     eeveePlaatje.src = "./images/eeveeplay.PNG";
+
+    if (welkeEvolutie == 0){
+        eeveePlaatje.src = "./images/eeveeplay.PNG";
+    }
+    
+    else if (welkeEvolutie == 1){
+        eeveePlaatje.src = "./images/vaporeonplay.PNG";
+    }
+
+    else if (welkeEvolutie == 2){
+        eeveePlaatje.src = "./images/umbreon.jpeg";
+    }
 }
 
 
@@ -115,12 +154,18 @@ button.addEventListener("click", () => {
 
 /*Array*/
 var buttonDing = document.querySelector('.randomspeelgoed');
+/*Button wordt hier opgehaald uit de html*/
 buttonDing.addEventListener("click", randomPlaatje);
+/*Button krijgt een click eventlistener, hierna voert hij de functie randomPlaatje uit*/
 
 function randomPlaatje(){
     var imageChange = ['./images/voetbal.png', './images/champagne.png', './images/sylveon.jpeg'];
+    /*Array wordt aangemaakt in een variabele*/
     var randomIndex = Math.floor(Math.random()*3);
+    /*Hier wordt het gekozen getalen door de computer afgerond naar beneden en hij moet tussen het getal 0 en 3 zitten*/
     document.querySelector('.speelgoedje').src = imageChange[randomIndex];
+    /*Hier wordt de class voor de image opgehaald en gezegd dat de src moet veranderen in het gekozen nummer (0-3) die gekoppeld is aan een bepaald
+    plaatje in de imageChange var*/
 }
 
 
