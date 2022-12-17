@@ -71,7 +71,7 @@ function updateBalk(){
         }
 
         else if (welkeEvolutie == 1){
-            eeveePlaatje.src = "./images/umbreon.jpeg";
+            eeveePlaatje.src = "./images/umbreon.PNG";
             welkeEvolutie = 2;
             balkStatus = 0;
             imageElement.src = "./images/bar0.png";
@@ -82,12 +82,53 @@ function updateBalk(){
         }
     }
 }
-function handleSubmit(){
-    console.log('hallo');
-}
+
+
+
 function barking(){
-    document.getElementById('barking').play()
-    document.getElementById('barking').3();
+
+    if (welkeEvolutie == 0){
+        document.getElementById('barkingeevee').play();
+    }
+
+    else if (welkeEvolutie == 1){
+        document.getElementById('splashvaporeon').play();
+    }
+
+    else if (welkeEvolutie == 2){
+        document.getElementById('playumbreon').play();
+    }
+    /* Bij welkeEvolutie 0 gaat het om eevee, bij 1 om vaporeon en om 2 bij Umbreon*/
+}
+
+function sleeping(){
+    if (welkeEvolutie == 0){
+        document.getElementById('sleepingeevee').play();
+    }
+
+    else if (welkeEvolutie == 1){
+        document.getElementById('sleepvaporeon').play();
+    }
+
+    else if (welkeEvolutie == 2){
+        document.getElementById('sleepumbreon').play();
+    }
+    /* Bij welkeEvolutie 0 gaat het om eevee, bij 1 om vaporeon en om 2 bij Umbreon*/
+}
+
+function eating(){
+    if (welkeEvolutie == 0){
+        document.getElementById('eatingeevee').play();
+    }
+
+    else if (welkeEvolutie == 1){
+        document.getElementById('eatvaporeon').play();
+    }
+
+    else if (welkeEvolutie == 2){
+        document.getElementById('eatumbreon').play();
+    }
+    /* Bij welkeEvolutie 0 gaat het om eevee, bij 1 om vaporeon en om 2 bij Umbreon*/
 }
 
 function sleepeevee(){
@@ -101,8 +142,9 @@ function sleepeevee(){
     }
 
     else if (welkeEvolutie == 2){
-        eeveePlaatje.src = "./images/umbreon.jpeg";
+        eeveePlaatje.src = "./images/umbreonsleep.PNG";
     }
+    /* Bij welkeEvolutie 0 gaat het om eevee, bij 1 om vaporeon en om 2 bij Umbreon*/
 }
 
 function feedeevee(){
@@ -116,8 +158,9 @@ function feedeevee(){
     }
 
     else if (welkeEvolutie == 2){
-        eeveePlaatje.src = "./images/umbreon.jpeg";
+        eeveePlaatje.src = "./images/umbreoneat.png";
     }
+    /* Bij welkeEvolutie 0 gaat het om eevee, bij 1 om vaporeon en om 2 bij Umbreon*/
 }
 
 function playeevee(){
@@ -132,15 +175,17 @@ function playeevee(){
     }
 
     else if (welkeEvolutie == 2){
-        eeveePlaatje.src = "./images/umbreon.jpeg";
+        eeveePlaatje.src = "./images/Umbreonplay.PNG";
     }
+    /* Bij welkeEvolutie 0 gaat het om eevee, bij 1 om vaporeon en om 2 bij Umbreon*/
 }
 
 
 
 
 
-/* Dit is het stukje waarbij als de gebruiker een naam invult, de h2 vervanderd in de ingevulde naam*/
+/* Dit is het stukje waarbij als de gebruiker een naam invult, de h2 vervanderd in de ingevulde naam
+Hier heeft een klasgenoot mee geholpen, zij is mijn bron.*/
 var input = document.querySelector("input");
 var p = document.querySelector(".jouwnaam");
 var button = document.querySelector(".naamkiezen");
@@ -159,9 +204,9 @@ buttonDing.addEventListener("click", randomPlaatje);
 /*Button krijgt een click eventlistener, hierna voert hij de functie randomPlaatje uit*/
 
 function randomPlaatje(){
-    var imageChange = ['./images/voetbal.png', './images/champagne.png', './images/sylveon.jpeg'];
+    var imageChange = ['./images/pokeball.PNG', './images/drankje.PNG', './images/plant.PNG', './images/croissant.PNG', './images/voetbal.png'];
     /*Array wordt aangemaakt in een variabele*/
-    var randomIndex = Math.floor(Math.random()*3);
+    var randomIndex = Math.floor(Math.random()*5);
     /*Hier wordt het gekozen getalen door de computer afgerond naar beneden en hij moet tussen het getal 0 en 3 zitten*/
     document.querySelector('.speelgoedje').src = imageChange[randomIndex];
     /*Hier wordt de class voor de image opgehaald en gezegd dat de src moet veranderen in het gekozen nummer (0-3) die gekoppeld is aan een bepaald
@@ -172,13 +217,16 @@ function randomPlaatje(){
 
 
 /*Deze variable worden aangemaakt om ervoor te zorgen dat de button classes luisteren naar de eventlistener, nameliijk de click op de button*/ 
+/*David de Vries (docent CMD heeft mij met deze code geholpen. Ik snap wat hij mij heeft uitgelegd.)*/
 var eersteKnop = document.querySelector('.eerste_knop');
 eersteKnop.addEventListener('click', updateBalk,);
 eersteKnop.addEventListener('click', feedeevee);
+eersteKnop.addEventListener('click', eating);
 
 var eersteKnop = document.querySelector('.tweede_knop');
 eersteKnop.addEventListener('click', updateBalk);
 eersteKnop.addEventListener('click', sleepeevee);
+eersteKnop.addEventListener('click', sleeping);
 
 var eersteKnop = document.querySelector('.derde_knop');
 eersteKnop.addEventListener('click', updateBalk);
@@ -191,8 +239,8 @@ eersteKnop.addEventListener('click', barking);
 
 var eventesten = document.querySelector("#evolvebuttonid");
 eventesten.addEventListener('click', updateBalk) 
-/* Als je op de button klikt van evolve, evolved eevee wel naar sylveon. Maar als je dan nog een keer op een button klikt gaat
-hij weer terug naar eevee in plaats van verder met sylveon. Dit komt omdat ik een eventlistener heb gehangen aan de buttons.*/
+/* Als je op de button klikt van evolve, evolved hij naar eevee. Hierdoor wordt 
+de welkeEvolutie 1 en speelt hij regel 60 af met opnieuw de funtie updateBalk op regel 7*/
 console.log(eventesten);
 if (balkStatus == 100) {
     eventesten.removeAttribute("disabled")
